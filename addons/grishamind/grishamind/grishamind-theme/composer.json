@@ -1,0 +1,9 @@
+{
+    "name": "grishamind/grishamind-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Grishamind\\GrishamindTheme\\": "src/"
+        }
+    }
+}

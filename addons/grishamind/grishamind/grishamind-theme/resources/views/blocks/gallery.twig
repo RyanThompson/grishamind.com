@@ -1,0 +1,14 @@
+<section class="mini-gallery">
+
+    <ul>
+        {% for image in block.images %}
+            <li>
+                <a href="{{ image.route('view') }}" data-fancybox rel="Gallery-{{ block.id }}" title="{{ image.filename }}">
+                    {{ image.make.resize(80, 80)|raw }}
+                    <span class="zoom"></span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</section>

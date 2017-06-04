@@ -1,0 +1,28 @@
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("scripts.js") %}
+    {{ script|raw }}
+{% endfor %}
+
+<!-- JavaScript at the bottom for fast page loading -->
+<script type="text/javascript">
+
+    // Put it here
+    window.onload = function () {
+
+        // Slider
+        $('#jumbotron').width($('body').width() + 'px');
+        $('#jumbotron').layerSlider({
+            slideDelay: 7000
+        });
+
+        // Make equal-columns.. equal!
+        $('.equal-column').equalHeights(30);
+
+        // FancyBox
+        $(".mini-gallery ul li a").fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    }
+
+</script>
